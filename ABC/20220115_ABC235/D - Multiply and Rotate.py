@@ -1,5 +1,4 @@
-# 以下の解法では、WAとなる（All 17/19がAC、2/19がWA）
-# 理由は不明（2022/1/17現在）
+# ★部分に気づけず、WA（All 17/19がAC、2/19がWA）
 
 from collections import deque
 
@@ -31,7 +30,10 @@ while queue:
     if node%a == 0:
         nears.append(int(node/a))
 
-    if node_s[-1]!="0":
+    # ★ここがWAの原因。106→61になってしまう。本当は061なので、このパターンは認められない。
+    # ★WAを回避するには、以下のように2桁目が0の場合を考慮するように修正する必要があった。
+    # if node_s[-1]!="0":
+    if node_s[-1]!="0" and len(node_s)>1 and node_s[1]!="0":
         node_s = node_s[1:]+node_s[0]
         nears.append(int(node_s))
     
