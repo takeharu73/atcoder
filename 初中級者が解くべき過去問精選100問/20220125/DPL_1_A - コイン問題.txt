@@ -1,0 +1,25 @@
+"""
+はじめ、まだ支払える大きい硬貨から順番に払えば良いかなと思ったが、
+それだと例えば以下の場合に正解とならない
+n=15
+C=[1,7,8,9]
+※9から払うと残り1円でしか払えなくなり7枚必要になるが、正解は7円と8円1枚ずつで2枚。
+"""
+
+IN = iter(Input.split('\n')).__next__
+def input():
+    return IN()
+
+n, m = list(map(int, input().split()))
+C = list(map(int, input().split()))
+inf = 10**10
+
+dp = [inf]*(n+1)
+dp[0]=0
+
+for c in C:
+    for i in range(n + 1):
+        if i - c >= 0 and dp[i-c]!=inf:
+            dp[i] = min(dp[i], dp[i-c] + 1)
+
+print(dp[-1])
