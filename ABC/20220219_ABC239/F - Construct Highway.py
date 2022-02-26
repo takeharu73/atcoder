@@ -1,5 +1,6 @@
 # Union-findに気づき、惜しいところまでいくが、実装力が足りず時間切れ
 # Eをやればよかった・・。Eは1つずつ葉から計算していけばよいことは気付いたが、再帰に気付けず。
+# Eはオイラーツアーで解ける問題。https://qiita.com/recuraki/items/72e37eb9be9f71bc623a
 
 from collections import defaultdict
 
