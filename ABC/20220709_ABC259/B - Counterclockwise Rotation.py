@@ -1,3 +1,5 @@
+##### はじめcosとsinをnumpy使って出そうとしたが、AtCoderではnumpyは使えないのでmathに変更した。
+
 a,b,d = list(map(int,input().split()))
 # query = [list(map(int,input().split())) for _ in range(Q)]
  

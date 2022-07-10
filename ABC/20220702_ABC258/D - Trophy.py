@@ -1,3 +1,6 @@
+##### DPで検討したが、途中でDP不要と気付いたため、dpらしい怪しげなコードになっている。
+##### また、X<Nのケースに初め気づいておらず、1WAで危うかった（コード最後の2行）
+
 N,X= list(map(int,input().split()))
 AB = [list(map(int,input().split())) for _ in range(N)]
  

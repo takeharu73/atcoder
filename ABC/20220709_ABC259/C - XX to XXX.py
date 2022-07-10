@@ -1,3 +1,7 @@
+##### 2WA。原因が分からず死亡。
+##### ランレングス圧縮を先に気付くべきだった。
+
+
 S = input()
 T = input()
 # a,b,d = list(map(int,input().split()))
